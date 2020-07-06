@@ -4,10 +4,15 @@ from tkinter import *
 def add(event):
     display.insert(len(display.get()),event.widget.cget('text'))
 
-#reset display
+#reset display and all values
 def reset(event):
     display.delete(0,END)
-
+    
+    firstOperand = 0
+    secondOperand = 0
+    binOperation = ''
+    flag = False
+    
 #choose operation
 def operation(event):
     global firstOperand
